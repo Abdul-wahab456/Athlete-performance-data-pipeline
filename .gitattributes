@@ -1,0 +1,2 @@
+# Same line endings on Windows and in CI (Linux), so file contents and hashes match.
+* text=auto eol=lf

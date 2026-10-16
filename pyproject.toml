@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools==80.9.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "stride-pipeline"
+version = "1.0.0"
+requires-python = ">=3.11"
+
+[project.scripts]
+run = "main:cli_run"
+ingest = "main:cli_ingest"
+silver = "main:cli_silver"
+gold = "main:cli_gold"
+export = "main:cli_export"
+reprocess = "main:cli_reprocess"
+audit = "main:cli_audit"
+verify = "main:cli_verify"
+test = "main:cli_test"
+format = "main:cli_format"
+dashboard = "main:cli_dashboard"
+clean = "main:cli_clean"
+airflow-up = "main:cli_airflow_up"
+airflow-run = "main:cli_airflow_run"
+airflow-down = "main:cli_airflow_down"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+py-modules = ["main"]
+packages = ["common", "ingestion", "transformation", "reporting", "validation"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+src = ["src"]
+extend-exclude = ["data", "output", "orchestration/airflow/airflow_home"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+ignore = ["E501"]  # long lines inside SQL text are fine; ruff format wraps the code
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]

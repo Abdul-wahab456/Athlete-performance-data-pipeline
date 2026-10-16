@@ -1,0 +1,16 @@
+.venv/
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+
+data/warehouse/
+*.duckdb
+*.duckdb.wal
+
+output/
+
+orchestration/airflow/logs/
+orchestration/airflow/airflow_home/
+*.egg-info/
+dlq_demo/output/
+data.md

@@ -1,0 +1,18 @@
+# Airflow in one container (web page + scheduler). Start: make airflow-up   Page: http://localhost:8080
+# Paths are relative to this file, so the space in "D:\Visual Code" does not matter.
+services:
+  airflow:
+    build: .
+    command: standalone
+    user: "${AIRFLOW_UID:-50000}:0"
+    ports:
+      - "8080:8080"
+    environment:
+      AIRFLOW__CORE__LOAD_EXAMPLES: "false"
+      AIRFLOW__CORE__DAGS_ARE_PAUSED_AT_CREATION: "false"
+      AIRFLOW__CORE__DAGS_FOLDER: /opt/project/orchestration/airflow/dags
+      PYTHONPATH: /opt/project/src
+      PYTHONDONTWRITEBYTECODE: "1"
+    volumes:
+      - ./airflow_home:/opt/airflow   # Airflow's own settings, logs and password
+      - ../..:/opt/project            # the whole project: main.py, data/, output/

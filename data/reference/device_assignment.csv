@@ -1,0 +1,9 @@
+athlete_id,device_id,squad,valid_from,valid_to,evidence
+A01,D011,Endurance,2026-07-01,,watch: Ali on D011 in both roster snapshots (1 Jul and 1 Sep); used all season | squad: Endurance in both roster snapshots and in all 30 coach notes
+A02,D012,Endurance,2026-07-01,,watch: Sara on D012 in both roster snapshots; used all season | squad: Endurance in both roster snapshots and in all 29 coach notes
+A03,D013,Speed,2026-07-01,2026-08-11,watch: Hamza on D013 in the 1 Jul roster; last D013 run before the handover is 10 Aug; D013 is unused 11-13 Aug | squad: Speed in both roster snapshots and in all 30 coach notes
+A03,D017,Speed,2026-08-11,,watch: Hamza on D017 in the 1 Sep roster; first D017 run is 12 Aug; start date set to 11 Aug (team question Q3) | squad: Speed in both roster snapshots and in all 30 coach notes
+A04,D014,Speed,2026-07-01,,watch: Zainab on D014 in both roster snapshots; used all season | squad: Speed in both roster snapshots and in all 30 coach notes
+A05,D015,Endurance,2026-07-01,2026-08-11,watch: Bilal on D015 in both roster snapshots; used all season (only his squad changed) | squad: Endurance in the 1 Jul roster; coach writes Endurance up to 10 Aug (19 notes)
+A05,D015,Speed,2026-08-11,,watch: Bilal on D015 in both roster snapshots; used all season (only his squad changed) | squad: Speed in the 1 Sep roster; coach writes Speed from 12 Aug (11 notes); change date set to 11 Aug (team question Q3)
+A06,D013,Endurance,2026-08-11,,watch: Mehak on D013 in the 1 Sep roster (not in the 1 Jul roster); D013 resumes on 14 Aug = Mehak's first coach note; handover date set to 11 Aug (team question Q3) | squad: Joined between the snapshots (only in the 1 Sep roster); first coach note 14 Aug says Endurance; start date set to 11 Aug when D013 was handed over (team question Q3)

@@ -1,0 +1,7 @@
+device_id,utc_offset_minutes,evidence
+D011,300,Readings start exactly at the vendor start time at UTC+5 for all 30 sessions (data audit check 2.09)
+D012,300,UTC+5 for all 29 sessions (data audit 2.09)
+D013,300,UTC+5 for all 29 sessions (data audit 2.09)
+D014,180,"Watch clock set to UTC+3: matches only at +3 for all 30 sessions, before and after firmware 2.4.0. Athlete was in Islamabad (GPS), so this is a wrongly set clock, not travel (team question Q1)"
+D015,300,UTC+5 for all 30 sessions (data audit 2.09)
+D017,300,UTC+5 for all 10 sessions (data audit 2.09)

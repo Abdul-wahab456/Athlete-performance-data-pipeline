@@ -7,7 +7,7 @@ which runs are missing data, who was in which squad) as tables, CSV files and ch
 
 It is written in **Python**; every calculation is **SQL** run by **DuckDB** (a small database that lives in one file).
 
-![Pipeline flow](docs/images/pipeline_flow.png)
+![How the pipeline works](docs/images/pipeline_overview.png)
 
 **Quick start (Windows).** The original assessment files are already in `data\raw`. Type these in a terminal, one line at a time:
 
@@ -306,7 +306,13 @@ output\  and  the dashboard
 "Grain" means **what one row stands for**. "Key" means **the column(s) that make each row different from every other row**,
 like a name tag. Every key is tested automatically: no two rows share it, and it is never empty.
 
-**The Gold star schema** (full column lists and the ERD: [docs/architecture.md](docs/architecture.md)):
+**The final Gold layer, at a glance.** One dimension (who) in the middle and three facts (what happened) around it:
+
+![The Gold layer: final tables](docs/images/gold_layer.png)
+
+The detailed picture with every column, key and the SCD2 columns is [docs/images/erd.png](docs/images/erd.png).
+
+**The Gold star schema** (full column lists: [docs/architecture.md](docs/architecture.md)):
 
 
 | Table                              | Type                    | One row stands for                                                              | Key                         | Why this grain                                                                                                                                                                         |
@@ -339,7 +345,9 @@ The cleaned tables these come from (`silver.stg_*`, `silver.ref_*`) are describe
 24 problems in the data. For each: **what we saw → why it happened → what we did, and why**. The full list with counts and
 examples is in [docs/data_issues.md](docs/data_issues.md).
 
-The picture at the top of this page (the flow map) shows where each problem enters (⚠️) and where it is fixed. The codes (like TZ-02) match the tables below. The same map as a table is in [docs/architecture.md](docs/architecture.md#3-flow-map-where-each-problem-lives).
+The detailed flow map below shows where each problem enters (⚠️) and where it is fixed. The codes (like TZ-02) match the tables below. The same map as a table is in [docs/architecture.md](docs/architecture.md#3-flow-map-where-each-problem-lives).
+
+![Detailed flow map](docs/images/pipeline_flow.png)
 
 **Watch readings (585,660)**
 
